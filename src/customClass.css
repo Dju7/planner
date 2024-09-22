@@ -1,0 +1,44 @@
+
+.fc-day {
+    background-color: rgb(239, 239, 240); /* Couleur de fond des cellules */
+  }
+  
+  .fc-day:hover {
+    background-color: rgb(185, 189, 250); /* Couleur de fond au survol */
+  }
+  
+  .fc-day.fc-today {
+    background-color: rgb(243, 61, 152); /* Couleur de la cellule d'aujourd'hui */
+  }
+
+  .fc-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row; /* Par défaut, disposition en ligne */
+  }
+  
+  @media screen and (max-width: 768px) {
+    .fc-toolbar {
+      flex-direction: column; /* Disposition en colonne pour les petits écrans */
+      align-items: flex-start; /* Aligne les éléments à gauche */
+    }
+  }
+
+  :root {
+
+    --fc-button-text-color: #3346f7;
+    --fc-button-hover-bg-color:#fc7f7f;
+    --fc-button-active-bg-color:#8edbfa;
+    --fc-button-bg-color: #edeff0;
+    --fc-border-color: rgb(64, 51, 252);
+    --fc-daygrid-event-dot-width: 5px;
+    --fc-text-color: #18a73c;
+    --fc-event-bg-color: #3788d8;
+    
+   
+  }
+
+  
+
+ 
