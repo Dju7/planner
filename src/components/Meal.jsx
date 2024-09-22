@@ -23,7 +23,7 @@ export default function Meal({ meal }) {
   return (
     <article className="flex flex-col items-center justify-center p-4 bg-blue-200 rounded-xl shadow-xl">
       <h3 className="w-72 overflow-hidden whitespace-nowrap text-ellipsis mb-1 text-lg text-blue-500 font-bold">{meal.title}</h3>
-      <img src={imageUrl} alt="recipe" className="h-[350px] w-[350px] object-cover" />
+      <img src={imageUrl} alt="recipe" className="h-[250px] md:h-[350px] w-[350px] object-cover" />
       <ul className="flex flex-col mb-2">
         <li>Preparation time: {meal.readyInMinutes} minutes</li>
         <li>Number of servings: {meal.servings}</li>

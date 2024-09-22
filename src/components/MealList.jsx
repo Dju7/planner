@@ -8,8 +8,8 @@ export default function MealList({ mealData }) {
   return (
     <section className="min-h-[750px] overflow-scroll">
       <div className="h-[15%] w-full flex flex-col justify-center items-center mb-6">
-        <div className="h-full w-[80%] flex justify-center items-center text-xl text-blue-500 bg-blue-200 rounded-xl">
-            <ul className="text-2xl w-full md:w-[60%] h-full flex flex-col lg:flex-row justify-around items-start md:items-center p-4">
+        <div className="h-full w-full md:w-[80%] flex justify-center items-center text-xl text-blue-500 bg-blue-200 rounded-xl">
+            <ul className="text-xl md:text-2xl w-full md:w-[60%] h-full flex flex-col lg:flex-row justify-around items-start md:items-center p-4">
                 <li>Calories: {nutrients.calories.toFixed(0)}kcal</li>
                 <li>Carbohydrates: {nutrients.carbohydrates.toFixed(0)}</li>
                 <li>Fat: {nutrients.fat.toFixed(0)}</li>
