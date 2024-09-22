@@ -8,7 +8,7 @@ const NewsCard= ({ title, img, source, description, url, }) => {
           {img && <img alt='pictures of article' src={img} className="h-[260px] w-full object-cover" />}
         </div>
         <div className='h-full w-full md:w-[50%] flex flex-col justify-between overflow-hidden'>
-            <h3 className='text-md font-bold  '>{title}</h3>
+            <h3 className='text-md text-blue-700 font-bold  '>{title}</h3>
             <p className=' text-sm w-[90%] '>{description}</p>
             <p className='text-sm text-right'>{source}</p>
         </div>
