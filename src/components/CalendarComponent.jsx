@@ -44,6 +44,10 @@ function CalendarComponent() {
     }
   }
 
+  const handleEventTouch = (touchInfo) => {
+    handleEventClick(touchInfo);
+  };
+
   const handleEvents = (events) => {
     setEvents(events);
     console.log('Events updated:', events);
@@ -76,6 +80,10 @@ function CalendarComponent() {
       editable={true}
       select={handleDateSelect}
       eventClick={handleEventClick}
+      eventDidMount={(info) => {
+        // Écoutez les événements tactiles
+        info.el.addEventListener('touchend', () => handleEventTouch(info));
+      }}
       eventRemove={() => {
         console.log("event deleted")
       }}

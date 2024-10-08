@@ -28,7 +28,7 @@ export default function Meal() {
         <div className="min-h-[70%] w-[80%] flex flex-col ">
         
             <div className="h-72 w-full flex flex-col items-center justify-center mb-4">
-                <h2 className="text-xl lg:text-4xl text-blue-500 mb-6">How much calorie today ?</h2>
+                <h2 className="text-xl italic lg:text-3xl text-blue-500 mb-6">How much calorie for today ?</h2>
                 <input
                 className="mb-4 h-12 w-60 text-blue-500 bg-blue-100 placeholder-blue-500 p-4 border border-blue-500"
                 type="number"

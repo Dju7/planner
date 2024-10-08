@@ -15,9 +15,9 @@ const DateTimeDisplay = () => {
   const formattedTime = dateTime.toLocaleTimeString('fr-FR');
 
   return (
-    <div className='mb-4 h-[200px] w-full flex flex-col justify-center items-center  rounded-lg text-2xl md:text-3xl lg:text-5xl gap-4 lg:gap-8 text-blue-700'>
+    <div className='mb-4 h-[200px] w-full flex flex-col justify-center items-center  rounded-lg text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl gap-4 lg:gap-8 text-blue-700'>
       <h1 className='text-2xl md:text-4xl lg:text-6xl 3xl:text-8xl mt-6'>{formattedDate}</h1>  
-      <p>{formattedTime}</p>      
+      <p className='p-1 border border-blue-700 rounded-lg'>{formattedTime}</p>      
      
     </div>
   );

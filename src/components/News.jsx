@@ -15,7 +15,20 @@ export default function News() {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        setNewsData(data);
+
+        // Filtrage des doublons par URL
+        const uniqueArticles = [];
+        const articleUrls = new Set();
+
+        data.data.forEach((news) => {
+          if (!articleUrls.has(news.title)) { // Filtre par URL unique
+            articleUrls.add(news.title);
+            uniqueArticles.push(news);
+          }
+        });
+
+        setNewsData({ data: uniqueArticles }); // Met à jour avec les articles filtrés
+
       } catch (error) {
         console.error('Error fetching data:', error);
         setError(error.message);
@@ -30,13 +43,13 @@ export default function News() {
   }
 
   return (
-    <div className='min-h-[80%] w-full flex flex-col justify-start items-start overflow-scroll rounded-xl '>
+    <div className='min-h-[80%] w-full flex flex-col justify-start items-start rounded-xl '>
       <p className='ml-10 text-3xl text-blue-700'> - DailyNews -</p>
-      <article className='p-8 h-auto grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 3xl:gap-8 overflow-auto  '>
+      <article className='p-8 h-auto grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 3xl:gap-8 overflow-auto'>
         {Array.isArray(newsData?.data) ? (
           newsData.data.map((news) => (
             <NewsCard
-              key={news.title}
+              key={news.url} // Utilisation de l'URL comme clé
               img={news.image}
               title={news.title}
               description={news.description}

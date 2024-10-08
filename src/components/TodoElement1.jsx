@@ -50,13 +50,13 @@ function TodoElement1() {
 
   return (
     <section className='w-full lg:w-[50%] min-h-[70vh] flex justify-center items-center mt-4'>
-      <div className='w-full min-h-[70vh] shadow-lg shadow-blue-400 rounded-xl border border-blue-500'>
+      <div className='w-full min-h-[70vh] shadow-lg shadow-blue-400 rounded-xl border border-blue-500 '>
         <div className='w-full h-36 flex flex-col justify-center items-center gap-2 mt-4'>
           <h2 className='text-3xl text-blue-500'>GOAL</h2>
           <input 
             type="text" 
             placeholder="Enter a Goal" 
-            className='w-[70%] text-black bg-blue-100/70 placeholder-blue-400 h-10 p-2 mt-2 rounded-xl'
+            className='w-[70%] text-black bg-blue-100 placeholder-blue-400 h-10 p-2 mt-2 rounded-xl border border-blue-500'
             value={newItem || ''}
             onChange={(e) => setNewItem(e.target.value)}
           />
@@ -71,7 +71,7 @@ function TodoElement1() {
             {items.map((item) => (
               <li 
                 key={item.id} 
-                className='w-[90%] p-2 flex justify-between bg-violet-500 text-2xl text-white shadow-xl mt-4 rounded-xl mb-2'
+                className='w-[90%] p-2 flex justify-between bg-red-400 text-2xl text-white shadow-xl mt-4 rounded-xl mb-2'
               >
                 {item.value}
                 <div>

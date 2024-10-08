@@ -21,15 +21,15 @@ export default function Meal({ meal }) {
   }, [meal.id]);
 
   return (
-    <article className="flex flex-col items-center justify-center p-4 bg-blue-200 rounded-xl shadow-xl">
-      <h3 className="w-72 overflow-hidden whitespace-nowrap text-ellipsis mb-1 text-lg text-blue-500 font-bold">{meal.title}</h3>
+    <article className="flex flex-col items-center justify-center p-4 banner rounded-xl shadow-xl mb-2">
+      <h3 className="w-72 overflow-hidden whitespace-nowrap text-ellipsis mb-1 text-lg text-white font-bold">{meal.title}</h3>
       <img src={imageUrl} alt="recipe" className="h-[250px] md:h-[350px] w-[350px] object-cover" />
-      <ul className="flex flex-col mb-2">
+      <ul className="flex flex-col mb-2 text-white">
         <li>Preparation time: {meal.readyInMinutes} minutes</li>
         <li>Number of servings: {meal.servings}</li>
       </ul>
 
-      <a className="h-8 w-32 bg-blue-500 text-white flex justify-center items-center rounded-xl p-1" href={meal.sourceUrl}>Go to Recipe</a>
+      <a className="h-8 w-32 bg-yellow-400 text-blue-500 font-bold flex justify-center items-center rounded-xl p-1" href={meal.sourceUrl}>Go to Recipe</a>
     </article>
   );
 }
